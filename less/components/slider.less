@@ -5,6 +5,7 @@
 
     .slider__item{
       box-shadow: 0px 30px 50px -15px rgba(0, 0, 0, 0.15);
+      line-height: 0;
 
       img{
         border-radius: 4px;
@@ -57,7 +58,7 @@ input[id^='slide']:checked + .slider__item {
   opacity: 1;
 }
 
-@nameOfSlides: slide-freedom slide-knowledge slide-skills slide-skills1 slide-skills2 slide-work1-image-1 slide-work1-image-2 slide-work1-image-3 slide-work2-image-1 slide-work2-image-2 slide-work2-image-3 slide-work3-image-1 slide-work3-image-2 slide-work3-image-3;
+@nameOfSlides: slide-freedom slide-knowledge slide-skills slide-work1-image-1 slide-work1-image-2 slide-work1-image-3 slide-work1-image-4 slide-work2-image-1 slide-work2-image-2 slide-work3-image-1 slide-work3-image-2 slide-work3-image-3 slide-work3-image-4;
 
 .component(@list, @i: 1) when (@i <= length(@list)) {
 

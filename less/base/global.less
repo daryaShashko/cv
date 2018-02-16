@@ -1,0 +1,51 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html{
+  color: @color-black;
+  font: 400 16px/1.5 @font-total;
+}
+
+h1, h2, h3, h4{
+  font-family: @font-header;
+}
+
+h1{
+  font-size: 3rem;
+  line-height: 1.25;
+}
+
+h2{
+  font-size: 2rem;
+  line-height: 1.25;
+}
+
+h3{
+  font-size: 1.5rem;
+}
+
+h4{
+  font-size: 1rem;
+
+  @media @break2, @break3, @break4{
+    font-size: 1.5rem;
+  }
+}
+
+.-bold{
+  font-family: @font-bold;
+  font-weight: bold;
+}
+
+a{
+  color: @color-red;
+  text-decoration: none;
+  transition: color .2s;
+
+  &:hover, &:active{
+    color: darken(@color-red, 10%);
+    text-decoration: none;
+  }
+}

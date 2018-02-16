@@ -1,0 +1,35 @@
+.panel{
+  padding: 25px 95px 25px 24px;
+  min-height: 304px;
+  border-radius: 4px;
+
+  &.-gradient{
+    background-image:  @gradient;;
+  }
+}
+
+.panel__title{
+  margin-bottom: 24px;
+}
+
+@media @break2 {
+  .panel__title{
+    margin-bottom: 40px;
+  }
+}
+
+@media @break2, @break3, @break4 {
+  .panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 24px 18px 32px;
+    min-height: auto;
+  }
+}
+
+@media @break3,@break4 {
+  .panel__title{
+    margin-bottom: 64px;
+  }
+}

@@ -1,0 +1,152 @@
+.screen {
+  &.-personal-info {
+    text-align: center;
+  }
+}
+
+.screen__title {
+  margin-bottom: 38px;
+}
+
+.-expectations {
+  .screen__title {
+    margin-bottom: 13px;
+  }
+}
+
+.screen__description {
+
+  a {
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+
+  & + & {
+    margin-top: 90px;
+  }
+}
+
+.screen__description-title{
+  margin-bottom: 8px;
+}
+
+.screen__description-info {
+  margin-bottom: 90px;
+
+}
+
+@media @break2 {
+  .screen__description {
+    & + & {
+      margin-top: 65px;
+    }
+
+    .slider {
+      min-width: 100%;
+    }
+  }
+
+  .screen__description-info {
+    margin-bottom: 30px;
+
+  }
+}
+
+@media @break2, @break3, @break4 {
+  .screen.-expectations {
+    .screen__title {
+      margin-bottom: 38px;
+    }
+  }
+
+  .screen.-expectations{
+    .slider__controls{
+      margin: 0;
+    }
+  }
+
+  .screen.-works {
+    .screen__description {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .screen__description-header {
+      min-width: 50%;
+
+      & + p {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  .screen__description-info {
+    display: flex;
+  }
+}
+
+@media @break3, @break4 {
+
+  .screen.-works {
+    .screen__description {
+      flex-wrap: nowrap;
+
+      & + & {
+        margin-top: 135px;
+      }
+
+      &:nth-of-type(2n+1) {
+        .slider {
+          margin-left: 72px;
+        }
+
+        .slider__item {
+          order: 2;
+        }
+
+        .slider__controls {
+          order: 1;
+          margin-left: 0;
+        }
+      }
+
+      &:not(:nth-of-type(2n+1)) {
+        .screen__description-info {
+          order: 2;
+        }
+
+        .slider {
+          margin-right: 72px;
+          order: 1;
+        }
+
+        .slider__item {
+          order: 1;
+        }
+
+        .slider__controls {
+          order: 2;
+          margin-right: 0;
+        }
+
+      }
+
+      .slider {
+        min-width: 50%;
+      }
+    }
+
+    .screen__description-info {
+      margin-bottom: 0;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .screen__description-header {
+      & + p {
+        margin-left: 0px;
+        flex: 1 0 ~"calc(50% - 16px)";
+      }
+    }
+  }
+}

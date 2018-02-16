@@ -1,0 +1,146 @@
+.slider {
+  position: relative;
+
+  &.-with-shadow{
+
+    .slider__item{
+      box-shadow: 0px 30px 50px -15px rgba(0, 0, 0, 0.15);
+
+      img{
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+.slider__controls{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.slider__label {
+  display: block;
+  .square(8px);
+  background-color: @color-red;
+  border-radius: 50%;
+  cursor: pointer;
+  left: 0;
+  z-index: 2;
+
+  &:hover {
+    background-color: #000;
+  }
+
+  & + &{
+    margin-left: 24px;
+  }
+}
+
+input[id^='slide']{
+  display: none;
+}
+
+.slider__item {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  z-index: 10;
+}
+
+input[id^='slide']:checked + .slider__item {
+  visibility: visible;
+  height: auto;
+  width: auto;
+  opacity: 1;
+}
+
+@nameOfSlides: slide-freedom slide-knowledge slide-skills slide-skills1 slide-skills2 slide-work1-image-1 slide-work1-image-2 slide-work1-image-3 slide-work2-image-1 slide-work2-image-2 slide-work2-image-3 slide-work3-image-1 slide-work3-image-2 slide-work3-image-3;
+
+.component(@list, @i: 1) when (@i <= length(@list)) {
+
+  @nameOfSlides: extract(@list, @i);
+  input[id=@{nameOfSlides}]:checked ~ .slider__controls .slider__label[for=@{nameOfSlides}]{
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+    background-color: @color-black;
+    .square(8px);
+  }
+  .component(@list, @i + 1);
+}
+
+.component(@nameOfSlides);
+
+
+@media @break2, @break3, @break4 {
+
+  .slider{
+    input{
+      display: none;
+    }
+  }
+
+  .slider.-panels{
+    display: flex;
+    flex-wrap: wrap;
+
+    .slider__label{
+      display: none;
+    }
+
+
+    .slider__item{
+      display: flex;
+      visibility: visible;
+      opacity: 1;
+      height: auto;
+      margin-bottom: 20px;
+      min-width: 45%;
+      flex: 1 0 0.1px;
+
+
+      &:not(:first-of-type) {
+        margin-left: 15px;
+      }
+
+      &:nth-of-type(2n + 1){
+        margin-left: 0;
+      }
+
+      &:nth-of-type(3n+1),
+      &:nth-of-type(5n){
+        //min-width: 55%;
+        flex-grow: 2;
+      }
+    }
+
+    .slider__label{
+      display: none;
+    }
+  }
+}
+
+@media @break3, @break4 {
+
+  .slider{
+    display: flex;
+  }
+
+  .slider .slider__controls{
+    display: flex;
+    flex-direction: column;
+    margin: 0 16px;
+  }
+
+  .slider__label{
+    margin-top: 16px;
+
+    & + &{
+      margin-left: 0;
+    }
+  }
+}
+

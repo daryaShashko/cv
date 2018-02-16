@@ -1,0 +1,39 @@
+.social-links{
+  margin-bottom: 34px;
+}
+
+.social-links__item{
+  display: flex;
+  align-items: center;
+
+  & + &{
+    margin-top: 12px;
+  }
+
+  &::before{
+    content: '';
+    display: inline-block;
+    .square(20px);
+    margin-right: 12px;
+    background-color: rgba(0,0,0,.1);
+    border-radius: 2px;
+  }
+}
+
+@media @break2, @break3, @break4 {
+  .social-links{
+    margin-bottom: 0;
+  }
+}
+
+@media @break3, @break4 {
+  .social-links{
+    position: relative;
+
+    &::before{
+      content: 'Ссылки на мои соцсети:';
+      display: block;
+      margin-bottom: 12px;
+    }
+  }
+}

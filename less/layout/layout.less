@@ -1,0 +1,58 @@
+.row{
+  width: 100%;
+
+  &.-blue{
+    background-color: @color-blue;
+  }
+
+  &.-gradient{
+    background-image: @gradient;
+  }
+
+  & + &{
+    margin-top: 83px;
+  }
+}
+
+.content-wrapper{
+  padding: 0 15px;
+}
+
+
+
+@media @break2 {
+
+  .row{
+    & + &{
+      margin-top: 103px;
+    }
+  }
+
+  .content-wrapper{
+    padding: 0 32px;
+  }
+}
+
+@media @break3 {
+  .row{
+    & + &{
+      margin-top: 127px;
+    }
+  }
+}
+
+@media @break3, @break4 {
+  .content-wrapper{
+    max-width: 944px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media @break4 {
+  .row{
+    & + &{
+      margin-top: 109px;
+    }
+  }
+}

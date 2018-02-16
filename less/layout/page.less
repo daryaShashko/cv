@@ -1,0 +1,160 @@
+.page{
+  .sticky-footer();
+}
+
+.page__header{
+  color: #fff;
+  text-align: center;
+  padding: 33px 0 42px;
+
+  &.-blue{
+    background-color: @color-blue;
+  }
+
+  h4{
+    margin-bottom: 21px;
+  }
+
+  .img.-avatar:not(.-circle){
+    display: none;
+  }
+
+}
+
+.page__body{
+  padding: 91px 0 88px;
+}
+
+.page__footer{
+  padding: 43px 0 72px;
+
+  &.-gradient{
+    background-image: @gradient;
+  }
+
+  h2{
+    margin-bottom: 15px;
+  }
+}
+
+@media @break2 {
+  .page__header{
+    padding: 97px 0 145px;
+  }
+
+  .page__body{
+    padding: 82px 0 88px;
+  }
+
+  .page__footer{
+    padding: 33px 0 98px;
+
+    h2{
+      margin-bottom: 21px;
+    }
+  }
+
+  .page__footer-addition{
+    .social-links{
+      min-width: 35%;
+    }
+
+    p{
+      padding-right: 120px;
+    }
+  }
+}
+
+@media @break2, @break3, @break4 {
+  .page__header{
+    h4{
+      margin-bottom: 11px;
+    }
+  }
+
+  .page__footer-addition{
+    display: flex;
+  }
+
+  .page__footer-addition{
+    .social-links{
+      order: 2;
+    }
+
+    p{
+      order: 1;
+    }
+  }
+}
+
+@media @break3, @break4 {
+  .page__header{
+    text-align: left;
+    padding: 0;
+    display: flex;
+
+    .img.-avatar.-circle{
+      display: none;
+    }
+    .img.-avatar:not(.-circle){
+      display: inline-block;
+      float: left;
+      width: 25%;
+      height: 100%;
+      margin: 0 95px 0 0;
+    }
+
+    .content-wrapper{
+      height: 100%;
+    }
+  }
+
+  .page__header-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 65px 0 97px;
+    height: 100%;
+
+    header{
+      margin-bottom: 75px;
+    }
+  }
+
+  .page__body{
+    padding: 106px 0 143px;
+  }
+
+  .page__footer{
+    padding: 81px 0 146px;
+
+    .content-wrapper{
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .page__footer-addition{
+      padding-right: 100px;
+    }
+
+    .page__footer-addition, .form-area{
+      flex: 1 0 50%;
+    }
+
+    h2{
+      min-width: 100%;
+      margin-bottom: 61px;
+    }
+
+    .page__footer-addition{
+      flex-direction: column;
+
+      p{
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+
+

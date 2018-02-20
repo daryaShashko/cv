@@ -473,6 +473,54 @@ input[id=slide-work3-image-4]:checked ~ .slider__controls .slider__label[for=sli
   width: 8px;
   height: 8px;
 }
+input[id=slide-work4-image-1]:checked ~ .slider__controls .slider__label[for=slide-work4-image-1] {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  background-color: #000;
+  width: 8px;
+  height: 8px;
+}
+input[id=slide-work4-image-2]:checked ~ .slider__controls .slider__label[for=slide-work4-image-2] {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  background-color: #000;
+  width: 8px;
+  height: 8px;
+}
+input[id=slide-work4-image-3]:checked ~ .slider__controls .slider__label[for=slide-work4-image-3] {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  background-color: #000;
+  width: 8px;
+  height: 8px;
+}
+input[id=slide-work4-image-4]:checked ~ .slider__controls .slider__label[for=slide-work4-image-4] {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  background-color: #000;
+  width: 8px;
+  height: 8px;
+}
+input[id=slide-work4-image-5]:checked ~ .slider__controls .slider__label[for=slide-work4-image-5] {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  background-color: #000;
+  width: 8px;
+  height: 8px;
+}
+input[id=slide-work4-image-6]:checked ~ .slider__controls .slider__label[for=slide-work4-image-6] {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  background-color: #000;
+  width: 8px;
+  height: 8px;
+}
 @media (min-width: 768px) and (max-width: 1023px), (min-width: 1024px) and (max-width: 1439px), (min-width: 1440px) {
   .slider input {
     display: none;
